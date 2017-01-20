@@ -1,9 +1,4 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="scouting2017.salinerobotics.org.a2017scoutingapp.MainMenu">
-    <item
-        android:id="@+id/action_settings"
-        android:orderInCategory="100"
-        android:title="@string/action_settings" />
-</menu>
+    tools:context="scouting2017.salinerobotics.org.a2017scoutingapp.MainMenu"></menu>
