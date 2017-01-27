@@ -1,7 +1,8 @@
 <resources>
     <string name="app_name">Scouting 2017</string>
-    <string name="large_text">
-        "Saline Singularity Scouting Application 2017. Made by Grant Davis and Gavin Severance\n"
-    </string>
-    <string name="title_activity_team_info">TeamInfo</string>
+    <string name="large_text">"Saline Singularity Scouting Application 2017. Made by Grant Davis and Gavin Severance\n"</string>
+    <string name="title_activity_team_info">TeamInfoGoesHere</string>
+    <string name="main_menu_mainTxt">Saline Singularity Scouting Application 2017</string>
+    <string name="main_menu_lblUsername">Username:</string>
+    <string name="main_menu_lblPassword">Password:</string>
 </resources>

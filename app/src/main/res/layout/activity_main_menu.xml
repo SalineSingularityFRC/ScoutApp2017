@@ -7,31 +7,60 @@
     android:fitsSystemWindows="true"
     tools:context="scouting2017.salinerobotics.org.a2017scoutingapp.MainMenu">
 
-    <android.support.design.widget.AppBarLayout
-        android:id="@+id/app_bar"
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/app_bar_height"
-        android:fitsSystemWindows="true"
-        android:theme="@style/AppTheme.AppBarOverlay">
+        android:layout_height="match_parent"
+        android:weightSum="1">
 
-        <android.support.design.widget.CollapsingToolbarLayout
-            android:id="@+id/toolbar_layout"
+        <TextView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:fitsSystemWindows="true"
-            app:contentScrim="?attr/colorPrimary"
-            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+            android:layout_height="100dp"
+            android:id="@+id/hdrMain"
+            android:background="?attr/colorPrimary"
+            android:textSize="14sp" />
 
-            <android.support.v7.widget.Toolbar
-                android:id="@+id/toolbar"
-                android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                app:layout_collapseMode="pin"
-                app:popupTheme="@style/AppTheme.PopupOverlay" />
+        <TextView
+            android:text="@string/main_menu_mainTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtMain"
+            android:textSize="32sp"
+            android:textAlignment="center" />
 
-        </android.support.design.widget.CollapsingToolbarLayout>
-    </android.support.design.widget.AppBarLayout>
+        <TextView
+            android:text="@string/main_menu_lblUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblUsername" />
 
-    <include layout="@layout/content_main_menu" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/txtboxUsername" />
+
+        <TextView
+            android:text="@string/main_menu_lblPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblPassword" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/txtboxPassword" />
+
+        <Button
+            android:text="Login"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:elevation="0dp" />
+
+    </LinearLayout>
 
 </android.support.design.widget.CoordinatorLayout>
