@@ -28,38 +28,34 @@
             android:textSize="32sp"
             android:textAlignment="center" />
 
-        <TextView
-            android:text="@string/main_menu_lblUsername"
+        <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/lblUsername" />
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/txtboxUsername"
+            android:hint="@string/main_menu_lblUsername" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.10" />
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
             android:ems="10"
-            android:id="@+id/txtboxUsername" />
-
-        <TextView
-            android:text="@string/main_menu_lblPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/lblPassword" />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textPersonName"
-            android:ems="10"
-            android:id="@+id/txtboxPassword" />
+            android:id="@+id/txtboxPassword"
+            android:hint="@string/main_menu_lblPassword" />
 
         <Button
-            android:text="Login"
+            android:text="Go"
             android:layout_height="wrap_content"
             android:id="@+id/btnLogin"
             android:layout_width="match_parent"
-            android:elevation="0dp" />
+            android:elevation="0dp"
+            android:onClick="onButtonGo" />
 
     </LinearLayout>
 
