@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.EditText;
 
 public class MainMenu extends AppCompatActivity {
+    public static Bluetooth bluetooth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,8 +17,19 @@ public class MainMenu extends AppCompatActivity {
         //setSupportActionBar(toolbar);
     }
 
+    public static void startBluetooth(){
+
+        bluetooth=new Bluetooth();
+        bluetooth.start();
+    }
+
     public void onButtonGo(View v){
         String user=((EditText)findViewById(R.id.txtboxUsername)).getText().toString();
         int robot=Integer.parseInt(((EditText)findViewById(R.id.txtboxPassword)).getText().toString());
+
+        Intent i=new Intent(this,Scouting.class);
+        i.putExtra("user",user);
+        i.putExtra("robot",robot);
+        startActivity(i);
     }
 }

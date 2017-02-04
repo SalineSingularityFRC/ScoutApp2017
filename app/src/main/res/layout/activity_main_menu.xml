@@ -31,7 +31,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPersonName"
+            android:inputType="textCapWords|textPersonName"
             android:ems="10"
             android:id="@+id/txtboxUsername"
             android:hint="@string/main_menu_lblUsername" />
@@ -44,7 +44,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPersonName"
+            android:inputType="number"
             android:ems="10"
             android:id="@+id/txtboxPassword"
             android:hint="@string/main_menu_lblPassword" />
