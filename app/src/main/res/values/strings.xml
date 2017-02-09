@@ -5,4 +5,6 @@
     <string name="main_menu_mainTxt">Saline Singularity Scouting Application 2017</string>
     <string name="main_menu_lblUsername">Name of scout</string>
     <string name="main_menu_lblPassword">Team # of robot being scouted</string>
+    <string name="scouting_activity_instructions">Instructions go here.</string>
+
 </resources>

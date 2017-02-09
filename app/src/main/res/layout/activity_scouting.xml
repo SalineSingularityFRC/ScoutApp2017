@@ -10,12 +10,52 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="scouting2017.salinerobotics.org.a2017scoutingapp.Scouting">
 
-    <TextView
-        android:text="You are in the scouting activity."
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:id="@+id/textView" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtScoutingDirections"
+            android:layout_weight="0.05"
+            android:text="@string/scouting_activity_instructions" />
+
+        <Button
+            android:text="Start of Match"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnStartOfMatch"
+            android:layout_weight="0.05" />
+
+        <Button
+            android:text="Gear Placed on Peg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnGearOnPeg"
+            android:layout_weight="0.05" />
+
+        <Button
+            android:text="Ball Scored - Low Goal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnBallScoredLow"
+            android:layout_weight="0.05" />
+
+        <Button
+            android:text="Ball Scored - High Goal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnBallScoredHigh"
+            android:layout_weight="0.05" />
+
+        <Button
+            android:text="End of Match"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnEndOfMatch"
+            android:layout_weight="0.05" />
+    </LinearLayout>
 </RelativeLayout>
