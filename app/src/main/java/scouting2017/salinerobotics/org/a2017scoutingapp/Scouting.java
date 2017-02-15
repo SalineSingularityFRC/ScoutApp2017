@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 /*import android.widget.Toast;
 import android.content.Context;*/
 
@@ -12,11 +13,13 @@ public class Scouting extends AppCompatActivity {
     public int robot;
     public long startTime;
     public long[] gearScoreTimes;
-    public int gearI;
+    public int gearI = 0;
     public long[] lowGoalScoreTimes;
-    public int lowGoalI;
+    public int lowGoalI = 0;
     public long[] highGoalScoreTimes;
-    public int highGoalI;
+    public int highGoalI = 0;
+    public long endTime = 0;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,27 +44,41 @@ public class Scouting extends AppCompatActivity {
     public void onStartMatchClick (View v)
     {
         long startTime = System.currentTimeMillis();
-
+        long endTime = startTime + 150000;
+        this.startTime = startTime;
+        this.endTime = endTime;
     }
+
     public void onGearClick (View v)
     {
-        int gearI = 0;
+        int gearI = this.gearI;
         gearI = gearI + 1;
         long gearScored = System.currentTimeMillis();
         gearScoreTimes[gearI] = gearScored;
+        this.gearI = gearI;
+        this.gearScoreTimes[gearI] = gearScoreTimes[gearI];
     }
     public void onLowGoalClick (View v)
     {
-        int lowGoalI = 0;
+        int lowGoalI = this.highGoalI;
         lowGoalI = lowGoalI + 1;
         long lowGoalScored = System.currentTimeMillis();
         lowGoalScoreTimes[lowGoalI] = lowGoalScored;
+        this.lowGoalI = lowGoalI;
+        this.lowGoalScoreTimes[lowGoalI] = lowGoalScoreTimes[lowGoalI];
     }
     public void onHighGoalClick (View v)
     {
-        int highGoalI = 0;
+        int highGoalI = this.highGoalI;
         highGoalI = highGoalI + 1;
         long highGoalScored = System.currentTimeMillis();
         highGoalScoreTimes[highGoalI] = highGoalScored;
+        this.highGoalI = highGoalI;
+        this.highGoalScoreTimes[highGoalI] = highGoalScoreTimes[highGoalI];
+    }
+    public void onEndMatchClick (View v)
+    {
+        Intent i = new Intent(this,Robot.class);
+        startActivity(i);
     }
 }

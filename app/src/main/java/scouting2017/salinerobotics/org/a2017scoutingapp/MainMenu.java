@@ -25,7 +25,7 @@ public class MainMenu extends AppCompatActivity {
 
     public void onButtonGo(View v){
         String user=((EditText)findViewById(R.id.txtboxUsername)).getText().toString();
-        int robot=Integer.parseInt(((EditText)findViewById(R.id.txtboxPassword)).getText().toString());
+        int robot=Integer.parseInt(((EditText)findViewById(R.id.txtboxTeamNum)).getText().toString());
 
         Intent i=new Intent(this,Scouting.class);
         i.putExtra("user",user);
