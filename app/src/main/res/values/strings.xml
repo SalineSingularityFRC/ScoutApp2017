@@ -5,6 +5,7 @@
     <string name="main_menu_mainTxt">Saline Singularity Scouting Application 2017</string>
     <string name="main_menu_lblUsername">Name of scout</string>
     <string name="main_menu_lblPassword">Team # of robot being scouted</string>
-    <string name="scouting_activity_instructions">Instructions go here.</string>
-
+    <string name="scouting_activity_instructions">This Page is for Scouting durring and after the match. Press the Start
+    Match button to begin. Durring the event press the button for each activity. After the match describe any penalties and add
+    comments describing any extra details. When finished press the finish button and you will be take back to the main menu.</string>
 </resources>

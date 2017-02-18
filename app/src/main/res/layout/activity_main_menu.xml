@@ -50,12 +50,18 @@
             android:hint="@string/main_menu_lblPassword" />
 
         <Button
-            android:text="Go"
+            android:text="Scout"
             android:layout_height="wrap_content"
-            android:id="@+id/btnLogin"
+            android:id="@+id/btnScout"
             android:layout_width="match_parent"
             android:elevation="0dp"
-            android:onClick="onButtonGo (MainMenu)" />
+            android:onClick="onButtonScouting (MainMenu)" />
+
+        <Button
+            android:text="Robot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnRobot" />
 
     </LinearLayout>
 

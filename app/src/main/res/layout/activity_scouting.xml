@@ -28,34 +28,73 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/btnStartOfMatch"
-            android:layout_weight="0.05" />
+            android:layout_weight="0.05"
+            android:onClick="onStartMatchClick (Scouting)" />
+
+        <Button
+            android:text="Autonomous Mode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnAuton"
+            android:layout_weight="0.05"
+            android:onClick="onAutonClick (Scouting)" />
 
         <Button
             android:text="Gear Placed on Peg"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/btnGearOnPeg"
-            android:layout_weight="0.05" />
+            android:layout_weight="0.05"
+            android:onClick="onGearClick (Scouting)" />
 
         <Button
             android:text="Ball Scored - Low Goal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/btnBallScoredLow"
-            android:layout_weight="0.05" />
+            android:layout_weight="0.05"
+            android:onClick="onLowGoalClick (Scouting)" />
 
         <Button
             android:text="Ball Scored - High Goal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/btnBallScoredHigh"
-            android:layout_weight="0.05" />
+            android:layout_weight="0.05"
+            android:onClick="onHighGoalClick (Scouting)" />
 
         <Button
-            android:text="End of Match"
+            android:text="Climbed Rope"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/btnEndOfMatch"
-            android:layout_weight="0.05" />
+            android:id="@+id/btnRopeClimb"
+            android:layout_weight="0.05"
+            android:onClick="onClimbClick (Scouting)" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:ems="10"
+            android:id="@+id/txtboxPenalties"
+            android:layout_weight="0.05"
+            android:hint="Penalties:" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/txtboxComments"
+            android:layout_weight="0.05"
+            android:hint="Comments:" />
+
+        <Button
+            android:text="Finish"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnFinish"
+            android:layout_weight="0.05"
+            android:onClick="onFinishClick (Scouting)" />
     </LinearLayout>
 </RelativeLayout>

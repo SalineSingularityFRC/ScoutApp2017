@@ -12,46 +12,40 @@ public class Scouting extends AppCompatActivity {
     public String user;
     public int robot;
     public long startTime;
+    public boolean autonomous;
     public long[] gearScoreTimes;
     public int gearI = 0;
     public long[] lowGoalScoreTimes;
     public int lowGoalI = 0;
     public long[] highGoalScoreTimes;
     public int highGoalI = 0;
+    public boolean climbed;
+    public long climbTime;
     public long endTime = 0;
+    public String penalties;
+    public String comments;
 
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scouting);
 
         Intent i=getIntent();
-        user=i.getStringExtra("user");
-        robot=i.getIntExtra("robot",-1);
-
-        /*if(!(robot>0)){
-            Context context = getApplicationContext();
-            CharSequence text = "Enter a valid team number!";
-            int duration = Toast.LENGTH_SHORT;
-
-            Toast toast = Toast.makeText(context, text, duration);
-            toast.show();
-            finish();
-        }*/
-
     }
     public void onStartMatchClick (View v)
     {
-        long startTime = System.currentTimeMillis();
-        long endTime = startTime + 150000;
-        this.startTime = startTime;
-        this.endTime = endTime;
+        startTime = System.currentTimeMillis();
+        endTime = startTime + 150000;
     }
+    public void onAutonClick (View v)
+    {
+        autonomous = true;
 
+    }
     public void onGearClick (View v)
     {
-        int gearI = this.gearI;
         gearI = gearI + 1;
         long gearScored = System.currentTimeMillis();
         gearScoreTimes[gearI] = gearScored;
@@ -60,25 +54,29 @@ public class Scouting extends AppCompatActivity {
     }
     public void onLowGoalClick (View v)
     {
-        int lowGoalI = this.highGoalI;
         lowGoalI = lowGoalI + 1;
         long lowGoalScored = System.currentTimeMillis();
         lowGoalScoreTimes[lowGoalI] = lowGoalScored;
-        this.lowGoalI = lowGoalI;
-        this.lowGoalScoreTimes[lowGoalI] = lowGoalScoreTimes[lowGoalI];
     }
     public void onHighGoalClick (View v)
     {
-        int highGoalI = this.highGoalI;
         highGoalI = highGoalI + 1;
         long highGoalScored = System.currentTimeMillis();
         highGoalScoreTimes[highGoalI] = highGoalScored;
-        this.highGoalI = highGoalI;
-        this.highGoalScoreTimes[highGoalI] = highGoalScoreTimes[highGoalI];
     }
-    public void onEndMatchClick (View v)
+    public void onClimbClick (View v)
     {
-        Intent i = new Intent(this,Robot.class);
-        startActivity(i);
+        climbed = true;
+        climbTime = System.currentTimeMillis();
+    }
+    public void onFinishClick (View v) {
+        /*System.out.println("Start time: " + startTime);
+        System.out.println("End Time: " + endTime);
+        System.out.println("Gears Scored: " + gearI);
+        System.out.println("High Goals Scored: " + highGoalI);
+        System.out.println("Low Goals Scored: " + lowGoalI);*/
+
+        String penalties =((EditText)findViewById(R.id.txtboxPenalties)).getText().toString();
+        String comments =((EditText)findViewById(R.id.txtboxComments)).getText().toString();
     }
 }

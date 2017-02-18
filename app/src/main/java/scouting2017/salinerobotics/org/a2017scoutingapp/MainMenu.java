@@ -23,11 +23,21 @@ public class MainMenu extends AppCompatActivity {
         bluetooth.start();
     }
 
-    public void onButtonGo(View v){
+    public void onButtonScouting(View v){
         String user=((EditText)findViewById(R.id.txtboxUsername)).getText().toString();
         int robot=Integer.parseInt(((EditText)findViewById(R.id.txtboxTeamNum)).getText().toString());
 
         Intent i=new Intent(this,Scouting.class);
+        i.putExtra("user",user);
+        i.putExtra("robot",robot);
+        startActivity(i);
+    }
+
+    public void onButtonRobot(View v){
+        String user=((EditText)findViewById(R.id.txtboxUsername)).getText().toString();
+        int robot=Integer.parseInt(((EditText)findViewById(R.id.txtboxTeamNum)).getText().toString());
+
+        Intent i=new Intent(this,Robot.class);
         i.putExtra("user",user);
         i.putExtra("robot",robot);
         startActivity(i);
