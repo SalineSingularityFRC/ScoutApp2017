@@ -10,7 +10,8 @@ public class MainMenu extends AppCompatActivity {
     public static Bluetooth bluetooth;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
         //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -23,13 +24,9 @@ public class MainMenu extends AppCompatActivity {
         bluetooth.start();
     }
 
-    public void onButtonScouting(View v){
-        String user=((EditText)findViewById(R.id.txtboxUsername)).getText().toString();
-        int robot=Integer.parseInt(((EditText)findViewById(R.id.txtboxTeamNum)).getText().toString());
-
-        Intent i=new Intent(this,Scouting.class);
-        i.putExtra("user",user);
-        i.putExtra("robot",robot);
+    public void onButtonScouting(View v)
+    {
+        Intent i = new Intent(this,Scouting.class);
         startActivity(i);
     }
 

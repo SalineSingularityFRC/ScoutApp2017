@@ -10,18 +10,21 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="scouting2017.salinerobotics.org.a2017scoutingapp.Scouting">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:id="@+id/txtScoutingDirections"
+        android:layout_weight="0.05"
+        android:text="@string/scouting_activity_instructions"
+        android:layout_height="100dp" />
+
     <LinearLayout
         android:orientation="vertical"
-        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:weightSum="1">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/txtScoutingDirections"
-            android:layout_weight="0.05"
-            android:text="@string/scouting_activity_instructions" />
+        android:weightSum="1"
+        android:layout_width="200dp"
+        android:id="@+id/layoutLeft"
+        android:layout_marginRight="200dp"
+        android:layout_marginTop="105dp">
 
         <Button
             android:text="Start of Match"
@@ -52,7 +55,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/btnBallScoredLow"
-            android:layout_weight="0.05"
             android:onClick="onLowGoalClick (Scouting)" />
 
         <Button
@@ -71,30 +73,68 @@
             android:layout_weight="0.05"
             android:onClick="onClimbClick (Scouting)" />
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="text"
-            android:ems="10"
-            android:id="@+id/txtboxPenalties"
-            android:layout_weight="0.05"
-            android:hint="Penalties:" />
+    </LinearLayout>
 
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textPersonName"
-            android:ems="10"
-            android:id="@+id/txtboxComments"
-            android:layout_weight="0.05"
-            android:hint="Comments:" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/linearLayout"
+        android:layout_toEndOf="@+id/linearLayout"
+        android:layout_marginLeft="200dp"
+        android:id="@+id/layoutRight"
+        android:layout_marginTop="105dp">
 
         <Button
-            android:text="Finish"
+            android:text="Undo Gear"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/btnFinish"
-            android:layout_weight="0.05"
-            android:onClick="onFinishClick (Scouting)" />
+            android:id="@+id/btnUndoGear"
+            android:layout_marginTop="115dp" />
+
+        <Button
+            android:text="Undo Low Goal Score"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnUndoLowGoal"
+            android:layout_marginTop="5dp" />
+
+        <Button
+            android:text="Undo High Goal Score"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnUndoHighGoal"
+            android:layout_marginTop="5dp" />
+
     </LinearLayout>
+
+    <Button
+        android:text="Finish"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnFinish"
+        android:layout_weight="0.05"
+        android:onClick="onFinishClick (Scouting)"
+        android:layout_marginTop="525dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/txtboxComments"
+        android:layout_weight="0.05"
+        android:hint="Comments:"
+        android:layout_marginTop="485dp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:ems="10"
+        android:id="@+id/txtboxPenalties"
+        android:layout_weight="0.05"
+        android:hint="Penalties:"
+        android:layout_marginTop="445dp" />
 </RelativeLayout>
